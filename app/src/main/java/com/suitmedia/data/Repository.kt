@@ -13,7 +13,7 @@ class Repository private constructor(private val apiService: ApiService) {
     fun getUsers(): LiveData<PagingData<User>> {
         return Pager(
             config = PagingConfig(
-                pageSize = 10
+                pageSize = 12
             ),
             pagingSourceFactory = {
                 UserPagingSource(apiService)
